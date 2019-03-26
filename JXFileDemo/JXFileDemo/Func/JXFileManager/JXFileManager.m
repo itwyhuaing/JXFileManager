@@ -258,22 +258,17 @@
     
     BOOL rlt = TRUE;
     rlt = [self removeItemAtFilePath:[self wkWebKitfsCachedDataPath]];
-    if (@available(iOS 9.0, *)) {
-        // 经测试 iOS 12 之前系统执行此移除方式之后可清楚本地磁盘缓存 ， 其中 cookie session 保留
-        NSSet *types = [NSSet setWithArray:@[WKWebsiteDataTypeDiskCache,
-                                             WKWebsiteDataTypeOfflineWebApplicationCache,
-                                             WKWebsiteDataTypeMemoryCache,
-                                             WKWebsiteDataTypeLocalStorage,
-                                             WKWebsiteDataTypeIndexedDBDatabases,
-                                             WKWebsiteDataTypeWebSQLDatabases]];
-        NSDate *dt = [NSDate dateWithTimeIntervalSince1970:0];
-        [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:types modifiedSince:dt completionHandler:^{
-            
-        }];
-    } else {
-        // Fallback on earlier versions
-    }
-    
+    // 经测试 iOS 12 之前系统执行此移除方式之后可清楚本地磁盘缓存 ， 其中 cookie session 保留
+    NSSet *types = [NSSet setWithArray:@[WKWebsiteDataTypeDiskCache,
+                                         WKWebsiteDataTypeOfflineWebApplicationCache,
+                                         WKWebsiteDataTypeMemoryCache,
+                                         WKWebsiteDataTypeLocalStorage,
+                                         WKWebsiteDataTypeIndexedDBDatabases,
+                                         WKWebsiteDataTypeWebSQLDatabases]];
+    NSDate *dt = [NSDate dateWithTimeIntervalSince1970:0];
+    [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:types modifiedSince:dt completionHandler:^{
+        
+    }];
     return rlt;
 }
 
