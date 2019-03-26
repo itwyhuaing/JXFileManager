@@ -1,0 +1,71 @@
+{
+    "state": 0,
+    "errorCode": 0,
+    "data": {
+        "country_telid": [{
+            "id": 86,
+            "showstring": "\u4e2d\u56fd + 86"
+        }, {
+            "id": 44,
+            "showstring": "\u82f1\u56fd + 44"
+        }, {
+            "id": 1,
+            "showstring": "\u7f8e\u56fd + 1"
+        }, {
+            "id": 1,
+            "showstring": "\u52a0\u62ff\u5927 + 1"
+        }, {
+            "id": 61,
+            "showstring": "\u6fb3\u5927\u5229\u4e9a + 61"
+        }, {
+            "id": 64,
+            "showstring": "\u65b0\u897f\u5170 + 64"
+        }, {
+            "id": 852,
+            "showstring": "\u9999\u6e2f + 852"
+        }, {
+            "id": 853,
+            "showstring": "\u6fb3\u95e8 + 853"
+        }, {
+            "id": 886,
+            "showstring": "\u53f0\u6e7e + 886"
+        }, {
+            "id": 81,
+            "showstring": "\u65e5\u672c + 81"
+        }, {
+            "id": 82,
+            "showstring": "\u97e9\u56fd + 82"
+        }, {
+            "id": 65,
+            "showstring": "\u65b0\u52a0\u5761 + 65"
+        }, {
+            "id": 60,
+            "showstring": "\u9a6c\u6765\u897f\u4e9a + 60"
+        }, {
+            "id": 66,
+            "showstring": "\u6cf0\u56fd + 66"
+        }, {
+            "id": 33,
+            "showstring": "\u6cd5\u56fd + 33"
+        }, {
+            "id": 34,
+            "showstring": "\u897f\u73ed\u7259 + 34"
+        }, {
+            "id": 49,
+            "showstring": "\u5fb7\u56fd + 49"
+        }, {
+            "id": 39,
+            "showstring": "\u610f\u5927\u5229 + 39"
+        }, {
+            "id": 351,
+            "showstring": "\u8461\u8404\u7259 + 351"
+        }, {
+            "id": 7,
+            "showstring": "\u4fc4\u7f57\u65af + 7"
+        }, {
+            "id": 375,
+            "showstring": "\u767d\u7f57\u65af + 375"
+        }]
+    },
+    "field": ""
+}
