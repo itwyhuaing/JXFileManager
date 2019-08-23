@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 static NSString *const kHttpCacheResponseData     = @"kHttpCacheResponseData";
-static NSString *const kJXCacheCommonData          = @"kCacheCommonData";
+static NSString *const kJXCacheCommonData         = @"kCacheCommonData";
 
 /**< 文件路径枚举>*/
 typedef enum : NSUInteger {
@@ -32,6 +32,8 @@ typedef enum : NSUInteger {
 
 /**< 文件操作回调>*/
 typedef void(^JXFileManagerBlock)(NSString *info);
+
+typedef void(^JXFileManagerOperateBlock)(BOOL status,NSString *info);
 
 @interface JXFileManager : NSObject
 
@@ -66,6 +68,10 @@ typedef void(^JXFileManagerBlock)(NSString *info);
 -(BOOL)sandBoxSaveInfo:(id)info forKey:(NSString *)key;
 -(id)sandBoxGetInfo:(Class)cls forKey:(NSString *)key;
 -(void)sandBoxClearAllInfoWithKey:(NSString *)key;
+
+-(void)sandBoxSaveInfo:(id)info forKey:(NSString *)key operateBlock:(JXFileManagerOperateBlock)operateBlock;
+-(void)sandBoxGetInfo:(Class)cls forKey:(NSString *)key operateBlock:(JXFileManagerOperateBlock)operateBlock;
+-(void)sandBoxClearAllInfoWithKey:(NSString *)key operateBlock:(JXFileManagerOperateBlock)operateBlock;
 
 #pragma mark - 解/归档
 - (void)archiveRootObj:(id)obj toFileWithKey:(NSString *)key; // 归档
